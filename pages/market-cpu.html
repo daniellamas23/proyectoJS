@@ -1,0 +1,156 @@
+<!DOCTYPE html> <!-- tipo de documento-->
+<html lang="en">
+<!-- etiqueta global html -->
+
+<head>
+   <!-- cabeza de documento -->
+   <meta charset="UTF-8"> <!-- codificación de caracteres -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
+   <title>Tienda</title> <!-- título de la página -->
+   <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon"> <!-- icono en pestaña de navegador-->
+   <link rel="stylesheet" href="../sass/main.css">
+   <!--linkeo archivo estilos css-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/08068b216f.js" crossorigin="anonymous"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <meta name="description" content="En nuestra tienda podrás encontrar todo lo que buscas">
+   <meta name="keywords" content=" PC DESKTOP , GAMING , JUEGOS, NOTEBOOKS, 
+   RYZEN , INTEL CORE, INTEL , AMD ,TARJETA DE VIDEO
+   PROCESADOR, COMPUTADORAS.">
+</head>
+
+<body>
+
+   <header class="animate__animated animate__fadeInDown">
+      <nav>
+         <div>
+            <label class="logo animate__animated animate__backInLeft"><a href="../index.html"><img src="../img/logo.png"></a></label>
+         </div>
+         <input type="checkbox" id="check">
+         <label for="check" class="bar-btn">
+            <i class="fas fa-bars"></i>
+         </label>
+
+         <ul class="nav-menu animate__animated animate__backInRight">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a class="active" href="./market.html">tienda</a></li>
+            <li><a href="./aboutus.html">sobre nosotros</a></li>
+            <li><a href="./contactus.html">contacto</a></li>
+         </ul>
+
+      </nav> <!-- barra de navegación-->
+   </header>
+
+   <!--Nav Bootstrap Market-->
+   <ul class="nav nav-pills market__nav animate__animated animate__fadeIn animate__delay-1s">
+      <li class="nav-item">
+         <a class="nav-link" href="./market.html">OFERTAS!</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="./market-pcgamer.html">PC Gamer</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link active" href="./market-cpu.html">Procesadores</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="./market-accs.html">Periféricos</a>
+      </li>
+   </ul>
+
+   <section class="market__section">
+      <div class="market_product animate__animated animate__backInUp animate__delay-0.8s">
+         <a href="#">
+            <img src="../img/I7-12700.jpg" alt="PROCESADOR INTEL I7 12700" width="150" height="150" class="product">
+         </a>
+         <h6>INTEL I7 12700 12 Núcleos 3.6Ghz <p>TURBO 4.8Ghz</p>
+         </h6>
+         <p><b>500 USD</b></p>
+
+
+      </div>
+      <div class="market_product  animate__animated animate__backInUp animate__delay-0.8s">
+         <a href="#">
+            <img src="../img/Ryzen9-5950X.jpg" alt="PROCESADOR AMD RYZEN 9 5950X" width="150" height="150"
+               class="product">
+         </a>
+         <h6>AMD RYZEN 9 5950X 16 Núcleos 3.4Ghz <p>TURBO 4.9Ghz</p>
+         </h6>
+         <p><b>900 USD</b></p>
+
+
+      </div>
+
+      <div class="market_product animate__animated animate__backInUp animate__delay-0.8s">
+         <a href="#">
+            <img src="../img/I5-11400.jpg" alt="PROCESADOR INTEL I5 11400" width="150" height="150" class="product">
+         </a>
+         <h6>INTEL I5 11400 6 Núcleos 2.6Ghz <p>
+               TURBO 4.4Ghz</p>
+         </h6>
+         <p><b>240 USD</b></p>
+
+
+      </div>
+
+      <div class="market_product animate__animated animate__backInUp animate__delay-0.8s">
+         <a href="#">
+            <img src="../img/Ryzen7-5700x.jpg" alt="PROCESADOR RYZEN 7 5700X" width="150" height="150" class="product">
+         </a>
+         <h6>RYZEN 7 5700X 8 Núcleos 3.4Ghz <p>TURBO 4.6Ghz</p>
+         </h6>
+         <p><b>399 USD</b></p>
+
+
+      </div>
+
+      <div class="market_product animate__animated animate__backInUp animate__delay-0.8s">
+         <a href="#">
+            <img src="../img/I7-11700F.jpg" alt="PROCESADOR INTEL I7 11700F" width="150" height="150" class="product">
+         </a>
+         <h6>INTEL I7 11700F 8 Núcleos 2.5Ghz <p>TURBO 4.9Ghz</p>
+         </h6>
+
+         <p><b>449 USD</b></p>
+
+      </div>
+
+      <div class="market_product animate__animated animate__backInUp animate__delay-0.8s">
+         <a href="#">
+            <img src="../img/Ryzen7-5800x.jpg" alt="PROCESADOR RYZEN 7 5800X" width="150" height="150" class="product">
+         </a>
+         <h6>RYZEN 7 5800X 6 Núcleos 3.7Ghz <p>TURBO 4.6Ghz</p>
+         </h6>
+         <p><b>499 USD</b></p>
+
+
+      </div>
+
+      </div>
+   </section>
+
+
+
+
+
+   <footer id="_footer" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
+      <a href="http://www.instagram.com"> <i class="fa-brands fa-instagram fa-2xl icon-ig"></i></a>
+      <a href="http://www.twitter.com"><i class="fa-brands fa-twitter fa-2xl icon-tw"></i></a>
+      <a href="http://www.whatsapp.com"><i class="fa-brands fa-whatsapp fa-2xl icon-wpp"></i></a>
+      <span>
+         <p>Power Gamer todos los derechos reservados.</p>
+      </span>
+
+      <p>Daniel Lamas</p>
+
+
+   </footer> <!-- pie de página  -->
+   <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>

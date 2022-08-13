@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!-- tipo de documento-->
+<html lang="en">
+<!-- etiqueta global html -->
+
+<head>
+    <!-- cabeza de documento -->
+    <meta charset="UTF-8"> <!-- codificación de caracteres -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
+    <title>Contacto</title> <!-- título de la página -->
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon"> <!-- icono en pestaña de navegador-->
+    <link rel="stylesheet" href="../sass/main.css">
+    <!--linkeo archivo estilos css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/08068b216f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <meta name="description" content="Contáctacte con nosotros - envíanos un mensaje">
+    <meta name="keywords" content=" PC DESKTOP , GAMING , JUEGOS, NOTEBOOKS, 
+   RYZEN , INTEL CORE, INTEL , AMD ,TARJETA DE VIDEO
+   PROCESADOR, COMPUTADORAS.">
+</head>
+
+<body>
+
+    <header class="animate__animated animate__fadeInDown">
+        <nav>
+            <div>
+                <label class="logo animate__animated animate__backInLeft"><a href="../index.html"><img
+                            src="../img/logo.png"></a></label>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="nav-menu animate__animated animate__backInRight">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./market.html">tienda</a></li>
+                <li><a href="./aboutus.html">sobre nosotros</a></li>
+                <li><a class="active" href="./contactus.html">contacto</a></li>
+            </ul>
+
+        </nav> <!-- barra de navegación-->
+    </header>
+
+
+    <h2 class="contactus_title animate__animated animate__backInLeft">Contacto</h2>
+    <div class="contactus__flexbox">
+        <form action="thanks.html" method="get" enctype="text/plain" class="form animate__animated animate__backInLeft">
+
+            <div>
+                <label for="_name">nombre (*)</label>
+                <input type="text" id="_name" placeholder="Ingresa tu nombre" required>
+            </div>
+            <br>
+            <div>
+                <label for="_email">email (*)</label>
+                <input type="email" id="_email" placeholder="example@mail.com" required>
+            </div>
+            <br>
+            <div>
+                <label for="_phone">teléfono</label>
+                <input type="text" id="_phone" placeholder="ingresa tu teléfono">
+            </div>
+            <br>
+
+            <select name="_subject" id="_subject">
+                <option value="1"> Consulta sobre productos</option>
+                <option value="2"> Consulta sobre compras </option>
+                <option value="3"> Otras consultas </option>
+            </select>
+            <br>
+            <br>
+            <div>
+                <textarea name="_comment" id="_comment" cols="30" rows="10" placeholder="Ingresa tu comentario"
+                    required=""></textarea>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="_acepto">Acepto términos y condiciones (*)</label>
+                <input type="checkbox" id="acepto" required>
+            </div>
+            <div>
+                <label for="_newsletter">Deseo recibir noticias de productos</label>
+                <input type="checkbox" id="_newsletter">
+            </div>
+            <br>
+            <p>los campos (*) son obligatorios</p>
+            <div class="contactus_buttons">
+                <input type="submit" value="Enviar comentario">
+                <input type="reset" value="Borrar todo">
+            </div>
+
+        </form>
+       
+                <div class="mapouter animate__animated animate__backInRight animate__delay-1s">
+                    <div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas"
+                         src="https://maps.google.com/maps?q=18%20de%20julio%20y%20ejido&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                 </div>
+             
+    </div>
+
+
+    <footer id="_footer" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
+        <a href="http://www.instagram.com"> <i class="fa-brands fa-instagram fa-2xl icon-ig"></i></a>
+        <a href="http://www.twitter.com"><i class="fa-brands fa-twitter fa-2xl icon-tw"></i></a>
+        <a href="http://www.whatsapp.com"><i class="fa-brands fa-whatsapp fa-2xl icon-wpp"></i></a>
+        <span>
+            <p>Power Gamer todos los derechos reservados.</p>
+        </span>
+
+        <p>Daniel Lamas</p>
+
+
+    </footer> <!-- pie de página  -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

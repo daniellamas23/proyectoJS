@@ -1,0 +1,130 @@
+/* media queries para responsive  */
+
+@media screen and (max-width: 500px) {
+
+
+    .form {
+        padding-left: 3px;
+        padding-bottom: 5%;
+    }
+
+    textarea {
+        max-width: 250px;
+    }
+
+    #_subject {
+        max-width: 250px;
+    }
+
+    .thanks_comment {
+        margin-top: 50%;
+
+    }
+
+    .card_aboutus {
+        margin:5% 2% 5% 2% !important;
+    }
+
+    .index__main {
+      margin:2%;
+    }
+
+ 
+
+}
+
+@media screen and (max-width: 470px) {
+
+    .market__section {
+        grid-template-columns: 1fr 1fr !important;
+        text-align: center;
+
+    }
+
+    .market_product {
+        text-align: center;
+
+    }
+}
+
+
+
+@media screen and (min-width: 720px) {
+
+    nav {
+        height: 100px;
+
+        .bar-btn {
+            display: none;
+        }
+
+        .nav-menu {
+            position: absolute;
+            height: 100px;
+            top: 0;
+            background: none;
+            transition: none;
+            text-align: right;
+            margin-right: 50px;
+            padding-right: 40px;
+
+
+            li {
+                display: inline-block;
+                line-height: 100px;
+                margin: 0 25px;
+                transition: none;
+
+                a {
+                    font-size: 14px;
+                    color: black;
+                }
+            }
+
+
+        }
+
+
+    }
+
+
+}
+
+@media screen and (max-width:940px) {
+
+    .form {
+        padding-left: 40%;
+    }
+
+    .contactus__flexbox {
+        flex-direction: column;
+        align-items:center;
+        
+
+    }
+
+    .mapouter {
+        width: 350px;
+
+
+    }
+
+    .gmap_canvas {       
+        max-width: 600px;
+    }
+
+    .card-title-market {
+        font-size: 16px;
+
+    }
+
+    .card-text-market {
+        font-size: 12px;
+
+    }
+    .gmap_canvas {
+        margin:auto;
+        margin-top:5%;
+        padding-right:0!important;
+    }
+}

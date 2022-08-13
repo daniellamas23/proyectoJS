@@ -1,0 +1,42 @@
+#carrito {
+    margin: 1%;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+
+    i {
+        margin-left: 2%;
+        cursor: pointer;
+    }
+}
+
+#item_cart {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    max-height: 1.5rem;
+
+    p:hover {
+        color: white;
+        font-weight:600;        
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    i:hover {
+        color: red;
+    }
+}
+
+
+#pay {
+
+    font-weight: 600;
+    color: green;
+    box-shadow: 5px 5px 5px;
+}
+
+#subt {
+    text-align: center;
+    font-weight: 600;
+
+
+}

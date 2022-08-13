@@ -1,0 +1,74 @@
+.contactus__flexbox {
+    display: flex;    
+   
+    
+}
+
+.form {
+   text-align: center;
+    background-color:rgba(0,0,0,.35);   
+    border-radius: 10px;
+    padding:15px;
+    margin-left: 10%;
+    margin-right:5%;
+    
+   
+}
+
+#_subject {
+    width: 300px;
+}
+
+.contactus_title {
+   padding: 10px 0 10px 30px;
+    @include titulos;
+}
+
+.contactus_buttons {
+
+    padding-left: 15%;
+
+}
+
+#_name {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#_email {
+    @extend #_name;
+}
+
+#_phone {
+    @extend #_name;
+}
+
+#_subject {
+    @extend #_phone;
+}
+
+#_comment {
+    @extend #_phone;
+    font-size: 16px;
+}
+
+
+.mapouter {
+    position: relative;    
+    height: 100%;
+    width: 80%;
+    margin:0 15px 0 15px;
+
+    
+
+    .gmap_canvas {
+       overflow: hidden;
+        background: none !important;
+        height: 100%;
+        width: 100%;
+        padding-right:10%;
+    }
+
+    
+}
+

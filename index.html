@@ -1,0 +1,179 @@
+<!DOCTYPE html> <!-- tipo de documento-->
+<html lang="en">
+<!-- etiqueta global html -->
+
+<head>
+  <!-- cabeza de documento -->
+  <meta charset="UTF-8"> <!-- codificación de caracteres -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
+  <title>Bienvenidos a Power Gamer</title><!-- título de la página -->
+  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon"> <!-- icono en pestaña de navegador-->
+  <link rel="stylesheet" href="./sass/main.css">
+  <!--linkeo archivo estilos css-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/08068b216f.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <meta name="description"
+    content="En PowerGamer encontrarás tu computadora GAMER además de cualquier tipo de componente que necesites. Visita tambien nuestros servicios de reparación y redes.">
+  <meta name="keywords" content=" PC DESKTOP , GAMING , JUEGOS, NOTEBOOKS, 
+   RYZEN , INTEL CORE, INTEL , AMD ,TARJETA DE VIDEO
+   PROCESADOR, COMPUTADORAS.">
+
+</head>
+
+<body>
+
+  <header class="animate__animated animate__fadeInDown">
+    <nav>
+      <div>
+        <label class="logo animate__animated animate__backInLeft"><a href="index.html"><img
+              src="./img/logo.png"></a></label>
+      </div>
+      <input type="checkbox" id="check">
+      <label for="check" class="bar-btn">
+        <i class="fas fa-bars animate__animated animate__backInRight"></i>
+      </label>
+
+      <ul class="nav-menu animate__animated animate__backInRight">
+        <li><a href="./pages/cart.html"><strong>NEW</strong> Carrito!</a></li>
+        <li><a class="active" href="index.html">Inicio</a></li>
+        <li><a href="./pages/market.html">tienda</a></li>
+        <li><a href="./pages/aboutus.html">sobre nosotros</a></li>
+        <li><a href="./pages/contactus.html">contacto</a></li>
+      </ul>
+
+    </nav> <!-- barra de navegación-->
+  </header>
+
+  <div id="bienvenida">
+    <p id="bienvenido" style="text-align:center;"></p>
+  </div>
+  
+  <form action="./pages/cart.html" method="get" enctype="text/plain" class="form_login animate__animated animate__backInLeft">
+
+    <div>
+      <label for="user">user</label>
+      <input type="text" id="user" placeholder="Ingresa tu usuario" required>
+    </div>
+
+    <div>
+      <label for="pass">pass</label>
+      <input type="password" id="pass" placeholder="Ingresa tu password"  required>
+        </div>
+        <button type="button" onclick="crear_usuario()">Acceder</button>
+        <input id="button_cart" type="submit"  name="button" value="Ir a la tienda" style="display:none"></input>
+      
+  </form>
+
+
+  <!--CARROUSEL Bootstrap-->
+  <div id="carouselExampleIndicators" class="carousel slide animate__animated animate__fadeInUp" data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/carrousel-mouse.jpg" class="d-block w-100" alt="MOUSE GAMER">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/carrousel-case.jpg" class="d-block w-100" alt="CASE SHARKOON RGB">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/Carrousel-2.jpg" class="d-block w-100" alt="CASE_Sharkoon">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </a>
+  </div>
+  <div class="alert alert-primary animate__animated animate__fadeInUp" role="alert" style="text-align:center;">
+
+    <b> En POWER GAMER tenemos las mejores ofertas para vos!</b>
+  </div>
+  <!--Card Bootstrap PRODUCTOS INDEX-->
+  <div class="card-group">
+    <div class="card" data-aos="zoom-in" data-aos-duration="1800">
+      <a href="./pages/market.html"><img src="./img/PC_INTEL_PROMO2.jpg" class="card-img-top"
+          alt="PROMO PC INTEL 2"></a>
+      <div class="card-body">
+        <h5 class="card-title">PC GAMER I5 + GPU <p><b> 1350 USD</b></p>
+        </h5>
+        <p class="card-text">Especificaciones: INTEL I5 12600K - 16 GB RAM DDR4 3600Mhz - GTX1650 4GB DDR5 - SSD 480 GB
+        </p>
+        <p class="card-text"><small class="text-muted">Oferta hasta agotar stock</small></p>
+      </div>
+    </div>
+    <div class="card" data-aos="zoom-in" data-aos-duration="1800">
+      <a href="./pages/market.html"><img src="./img/PC_RYZEN_PROMO.webp" class="card-img-top" alt="PROMO PC RYZEN"></a>
+      <div class="card-body">
+        <h5 class="card-title">PC GAMER RYZEN 7 + GPU <p><b> 1600 USD</b></p>
+        </h5>
+        <p class="card-text">Especificaciones: RYZEN 7 5800X - 16 GB RAM DDR4 3600MHZ - GTX1660 TI 6GB DDR5 - SSD 1TB
+        </p>
+        <p class="card-text"><small class="text-muted">Oferta hasta agotar stock</small></p>
+      </div>
+    </div>
+    <div class="card" data-aos="zoom-in" data-aos-duration="1800">
+      <a href="./pages/market.html"><img src="./img/PC_INTEL_PROMO3.jpg" class="card-img-top"
+          alt="PROMO PC INTEL 3"></a>
+      <div class="card-body">
+        <h5 class="card-title">PC GAMER I7-11700F<p><b> 1990 USD</b></p>
+        </h5>
+        <p class="card-text">Especificaciones: I7 I7-11700F - 32 GB RAM DDR4 3600MHZ - RTX 3060 TI 8GB GDDR 6 - SSD 2TB
+        </p>
+        <p class="card-text"><small class="text-muted">Oferta hasta agotar stock</small></p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="index__main" data-aos="zoom-in">
+      <h3>Nunca fue tan fácil comprar!</h3>
+      <ol>
+        <li>Selecciona tu producto <i class="fa-regular fa-hand-pointer fa-2xl"></i></li>
+        <li>Pedilo <i class="fa-regular fa-bell fa-2xl"></i></li>
+        <li>Disfrutalo! <i class="fa-regular fa-face-grin-stars fa-2xl"></i></li>
+      </ol>
+    </div> <!-- contenedor de etiquetas  -->
+  </main>
+
+  <footer id="_footer" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
+    <a href="http://www.instagram.com"> <i class="fa-brands fa-instagram fa-2xl icon-ig"></i></a>
+    <a href="http://www.twitter.com"><i class="fa-brands fa-twitter fa-2xl icon-tw"></i></a>
+    <a href="http://www.whatsapp.com"><i class="fa-brands fa-whatsapp fa-2xl icon-wpp"></i></a>
+    <span>
+      <p>Power Gamer todos los derechos reservados.</p>
+    </span>
+
+    <p>Daniel Lamas</p>
+
+
+  </footer> <!-- pie de página  -->
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

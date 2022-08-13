@@ -1,0 +1,57 @@
+@mixin titulos {
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: -2px -2px 4px rgba(255, 0, 0, 1), 2px 2px 6px black, 2px 3px #fff;
+    letter-spacing:2.5px;
+   
+
+
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swa);
+
+@import 'header';
+@import 'cart';
+@import 'index';
+@import 'responsive';
+@import 'footer';
+@import 'market';
+@import 'contactus';
+@import 'aboutus';
+@import 'thanks';
+
+$colores: (
+    fondo1:skyblue,
+    fondo2:white,
+);
+
+
+$redes: (
+    ig: rgb(215, 56, 215),
+    tw: rgb(63, 182, 229),
+    wpp: green
+);
+
+@each $red,
+$valor in $redes {
+    .icon-#{$red} {
+        color: $valor;
+    }
+}
+
+
+
+/*CSS Reset*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body Style */
+body {
+    font-family: "MontSerrat", sans-serif !important;
+    background: linear-gradient(to bottom, map-get($colores, fondo1), map-get($colores, fondo2), map-get($colores, fondo1));
+    overflow-x:hidden;
+   }

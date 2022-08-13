@@ -1,0 +1,23 @@
+
+
+.card-body {
+    text-align:center ;
+}
+
+.aboutus_aboutus    {
+    @extend .contactus_title ;
+    margin-left: 3.5%;
+    padding:1%; 
+    padding-top:2%;
+    
+}
+
+.card-title {
+    @extend .contactus_title ;
+}
+
+.card_aboutus {
+    max-width: 840px;
+    margin:5% auto 5% auto;
+      
+}

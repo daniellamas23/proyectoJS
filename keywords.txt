@@ -1,0 +1,7 @@
+
+Se agrega META a todas las paginas
+Se modifican algunos title
+Se modifican ALT a imagenes
+Se agregan palabras clave: PC DESKTOP , GAMING , JUEGOS, NOTEBOOKS, 
+				RYZEN , INTEL CORE, INTEL , AMD ,TARJETA DE VIDEO
+				PROCESADOR, COMPUTADORAS.

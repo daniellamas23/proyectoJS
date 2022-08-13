@@ -1,0 +1,361 @@
+/*GOOGLE FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+/*CSS RESET*/
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "MontSerrat", sans-serif !important;
+    background: linear-gradient(to right, skyblue,white) ;}
+
+/*modelado header - nav*/
+
+header {
+    position:relative;
+    width:100%;
+    height:100%;
+     z-index: 100;
+       
+}
+
+nav {
+    height:100px;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width:140px;
+    margin-left:20px;
+    font-weight:800;
+    font-size:20px;
+   
+}
+.bar-btn {
+    font-size:25px;
+    color:rgb(0, 0, 0);
+    margin-right:3%;
+    cursor:pointer;
+    }
+
+    .nav-menu {
+        position: fixed;
+        width:100%;
+        height:0vh;
+        top:100px;
+        background: rgba(0,0,0,.95);
+        text-align:center;
+        transition: all .5s;
+        max-height:350px;
+    }
+
+    .nav-menu li {
+        display:none;
+        line-height: 30px;
+        margin:50px 0;
+        transition: all .5s;
+    }
+
+    .nav-menu li a {
+        color: rgb(255, 255, 255);
+        font-size:16px;
+        text-transform: uppercase;
+        font-weight:600;
+        text-decoration: none;     
+         
+        
+    }
+
+.nav-menu li a.active, .nav-menu li a:hover {
+    color: rgb(248,8,8);
+    transition: .3s;
+}
+.fa-solid {
+    margin-right:10px;
+}
+
+#check {
+    display:none;
+    }
+
+#check:checked ~ .nav-menu {
+        height:100vh;
+    }
+#check:checked ~ .nav-menu li {
+    display: block;
+
+}
+
+
+/*fin modelado header - nav*/
+
+
+#carouselExampleIndicators {
+    margin:auto;
+    padding:5%;
+    margin-top: 5%;
+    max-width: 1024px;
+    max-height: 768px;
+}
+
+.carousel-inner img {
+    
+    width: 500px;
+    height: 380px ;
+    border-radius: 4%;
+    
+}
+
+.carousel-control-next-icon {
+    color:red;
+}
+
+
+.index__section {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;  
+}
+
+
+.product {
+border:1px solid black;
+border-radius: 15%;
+margin: 1%;
+
+}
+
+.index__product {   
+    text-align: center;
+    
+    
+   
+}
+
+.index__product p {
+
+    margin:1%;
+    color:black;
+}
+
+
+
+ .index__main {
+text-align: center;
+
+ } 
+
+
+   #_footer {
+    background: linear-gradient (to right, skyblue, white);
+    text-align: center;
+    left:0px;
+    bottom:0px;
+    height:55px;
+    width:100%;
+    }
+
+    #_footer span {
+       font-weight: bold;
+       
+        
+            }
+
+ /*css market*/
+
+            .market__section
+            {
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+               align-content: center;
+            }
+
+        .market_product {
+            text-align: center;
+        }
+         
+
+.aboutus__flex
+{
+    display:grid;
+    width:100%;
+    grid-row-gap: 1%;
+    margin: 1%;
+
+}
+
+
+.card-body {
+    text-align:center ;
+}
+
+.aboutus_aboutus    {
+
+    margin-top: 3.5%;
+}
+
+
+      /*css contactus*/
+
+.form {
+    display:grid;    
+    grid-row-gap: 1%;
+    padding-top: 15px;
+    padding-left: 45px;
+    margin-bottom:10%;
+    
+}
+
+#_subject {
+    width: 300px;
+}
+
+.contactus_title {
+
+    padding:5px;
+
+}
+
+.contactus_buttons {
+
+    padding-left:15%;
+
+}
+
+
+
+
+/* css thanks */
+
+.thanks_comment {
+    text-align: center;
+    margin-top:10%;
+
+}
+
+
+
+
+
+
+
+/* media queries para responsive  */
+
+@media screen and (max-width: 500px)
+                        {                          
+                           
+                        
+                            .index__section {
+                                margin-top: 35%;
+                            }
+                      
+                        .form   {
+                            padding-left: 3px;
+                            margin-top: 20%;
+
+                        }
+                        textarea {
+                            max-width: 250px;
+                        }
+                   
+
+                            .thanks_comment 
+                            {
+                                margin-top: 50%;
+
+                            }
+
+                        .card {
+                            max-width:280px;
+                           
+                        }
+
+
+                        }   
+
+               
+
+@media screen and (max-width: 470px) {
+      
+    .index__section {
+    grid-template-columns: 1fr 1fr;
+
+    }
+    .index__product {
+        text-align: center;
+    }
+    .market__section {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 40%;
+        
+    }
+    .market_product {
+        text-align: center;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 680px) {
+
+    .market__section {
+        margin-top: 10%;
+    }
+    .market__category  {   /* falta hacerlo menu hamburguesa cuando se achica */
+        display:none;
+    }
+
+    }
+
+@media screen and (max-width: 720px)        
+{
+    .aboutus__flex_item { 
+        width:95%;
+    
+}
+
+
+}
+
+@media screen and (min-width: 720px)    {
+
+    .logo {
+        margin-left: 30px;
+    }
+    nav {
+        height:100px;
+    }
+    .bar-btn {
+        display: none;
+    }
+    .nav-menu {
+        position:fixed;
+        height:100px;
+        top:0;
+        background:none;
+        transition:none;
+        text-align:right;
+        margin-right:50px;
+        padding-right:40px;
+    }
+
+    .nav-menu li {
+        display:inline-block;
+        line-height:100px;
+        margin:0 25px;
+        transition: none;
+    }
+    .nav-menu li a {
+        font-size:14px;
+        color:black;
+    }
+}
+
