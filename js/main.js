@@ -25,6 +25,16 @@ class usuario {
 
 }
 
+const acceder = document.getElementById("acceder");
+
+acceder.addEventListener("click",() => {
+
+	crear_usuario();
+});
+
+
+
+
 function crear_usuario() {
     let user = document.getElementById("user").value
     let pass = document.getElementById("pass").value
@@ -32,6 +42,9 @@ function crear_usuario() {
 
     if (user.length == 0 || pass.length == 0) {
         alert("Ingrese usuario y contraseña para acceder")
+        document.getElementById("user").value = ""
+        document.getElementById("pass").value = ""
+
     }
     else {
         let user1 = new usuario(user, pass)

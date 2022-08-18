@@ -138,6 +138,27 @@ header .nav-menu li a:hover {
   font-weight: 600;
 }
 
+.cart-img {
+  display: block;
+  max-width: 25%;
+  margin: 1% auto;
+  background-color: white;
+  border-radius: 10%;
+  -webkit-box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#button_list {
+  display: inline-block;
+  background: rgba(255, 0, 0, 0.3);
+}
+
+#div_session {
+  font-size: 13px;
+  font-weight: 600;
+}
+
 #carouselExampleIndicators {
   margin: auto;
   padding: 5%;
@@ -259,6 +280,7 @@ header .nav-menu li a:hover {
   nav .nav-menu li a {
     font-size: 14px;
     color: black;
+    text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.4);
   }
 }
 
