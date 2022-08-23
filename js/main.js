@@ -1,10 +1,16 @@
 
 
-
-
 //Arreglos para usuarios y catalogos
 let user_array = [];
-let catalog_array = [];
+
+// Evento que se dispara cuadno se carga la pagina
+document.addEventListener('DOMContentLoaded', () => {
+  
+    sessionStorage.removeItem("IsThisFirstTime_Log_From_LiveServer"); //elimino clave-valor generada por live server
+    cart_array = JSON.parse( sessionStorage.getItem('carrito') ) || [];
+
+
+})
 
 
 
@@ -26,12 +32,12 @@ class usuario {
 }
 
 const acceder = document.getElementById("acceder");
-
+acceder === null ? console.log("boton acceder no existe en esta pagina") :
 acceder.addEventListener("click",() => {
 
 	crear_usuario();
 });
-
+ 
 
 
 
@@ -59,4 +65,5 @@ function crear_usuario() {
      }     
       
     }
+
 
