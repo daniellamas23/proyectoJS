@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/08068b216f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <meta name="description" content="En nuestra tienda podrás encontrar todo lo que buscas">
   <meta name="keywords" content=" PC DESKTOP , GAMING , JUEGOS, NOTEBOOKS, 
@@ -48,22 +49,16 @@
     </nav> <!-- barra de navegación-->
   </header>
 
-  <div class="animate__animated animate__backInLeft">
-    <p>Bienvenido!</p>
-    <div id="catalogo"></div>
-    <ol> 
-      <li><p id="button_list">Haz click para ver objetos almacenados en local storage</p>
-      <div id="div_session"></div></li>      
-      <li>3) <button type="button" id="button_add_cart">Agregar producto al carrito</button>  
-              
-        <input type="text" id="id_add" placeholder="Ingresa un ID del 1 al 10" required></li>
-        <li>4) <button type="button" id="ver_cat">Ver Carrito almacenado en cart_array desde sessionstorage</button></li>
+  <div class="animate__animated animate__backInLeft botones">
+    <ol>
+      <li><button type="button" id="button_add_cart">Agregar producto al carrito</button>
+        <input type="text" id="id_add" placeholder="Ingresa un ID del 1 al 10" required>
+      </li>
+      <li> <button type="button" id="reset">Vaciar Carrito</button> </li>
     </ol>
-    <button type="button" id="reset">sessionStorage.clear()</button>
   </div>
 
   <div>
-    <h3 style="text-align:center;"> Agregue un nuevo producto al carrito:</h3>
     <p id="title"></p>
     <p id="carrito"></p>
     <p id="subt"></p>
@@ -83,11 +78,13 @@
 
 
   </footer> <!-- pie de página  -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script>
     AOS.init();
   </script>
-    <script src="../js/class.js"></script>
-    <script src="../js/cart.js"></script>
+  <script src="../js/class.js"></script>
+  <script src="../js/cart.js"></script>
   <script src="../js/main.js"></script>
 </body>
 

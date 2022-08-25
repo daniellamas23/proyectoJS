@@ -19,70 +19,71 @@ catalog_array.push(new catalogo(10, "CPU", "INTEL I5 11400 6 Núcleos 2.6Ghz TUR
 
 
 
-// Escucho boton texto session storage
-const listar = document.getElementById("button_list");
 
-listar === null ? console.log("Boton button_list No existe en esta pagina") : 
+//Boton vaciar carrito (y session)
+const cart_clear = document.getElementById("reset")
 
-listar.addEventListener("click", () => {
-    let div = document.getElementById("div_session")
+cart_clear === null ? console.log("Boton reset No existe en esta pagina") :
 
-    if (sessionStorage.length == 0) {
-        alert("aun no has guardado objetos en session storage")
-
-        listar.innerHTML = "Haz click para ver objetos almacenados en local storage (prueba agregando un objeto al carrito)"
-    }
-
-    if (div.textContent.length > 0) { }
-    else {
-        verSessionStorage()
-
-    }
-
-}
-);
-//Veo session storage
-function verSessionStorage() {
-    let div = document.getElementById("div_session")
-    for (let i = 0; i < sessionStorage.length; i++) {
-        let clave = sessionStorage.key(i);
-        let valor = sessionStorage.getItem(clave)
-        div.innerHTML += clave + ")" + valor + "<br>"
-
-    }
-
-}
-//Boton reseteo sesion storage
+    cart_clear.addEventListener("click", () => {
+        sessionStorage.clear()
+        cart_array = JSON.parse(sessionStorage.getItem('carrito')) || [];
+        document.getElementById("pay").style.display = "none"
+        empty_cart()
+        document.getElementById("subt").innerHTML = ""
+        show_Cart()
+    })
 
 
-const session_clear = document.getElementById("reset") //reseteo para trabajar con storage limpio
-
-session_clear === null ? console.log("Boton reset No existe en esta pagina") : 
-
-session_clear.addEventListener("click", () => {
-    sessionStorage.clear()
-})
-
-const ver_cat = document.getElementById("ver_cat");
-
-ver_cat === null ? console.log("Boton ver_cat no existe en esta pagina") :
-
-ver_cat.addEventListener("click", () => {
-
-    cart_array.length === 0 ? alert("Aun no hay objetos en el carrito") : document.getElementById("carrito").innerHTML = cart(), get_del_button()
-
-});
 
 
 //Escucho boton para añadir elemento al carrito
 const button_add_cart = document.getElementById("button_add_cart")
 button_add_cart === null ? console.log("Boton button_add_cart no existe en esta pagina") :
-button_add_cart.addEventListener("click", () => {
-    cart_add()
-})
+    button_add_cart.addEventListener("click", () => {
+        cart_add()
+    })
 
+function alerta_producto() {
+    Toastify({
+        text: "Se agregó el producto al carrito",
+        duration: 2000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, green , grey )",
+        },
+        onClick: function () { } // Callback after click
+    }).showToast()
 
+    Toastify({
+        text: "Haz click aqui para ir al carrito",
+        destination: "../pages/cart.html",
+        gravity: "bottom",
+        duration: 5000,
+        newWindow: true
+    }).showToast()
+}
 
+function alerta_id() {
+    Toastify({
+        text: "Error! Selecciona un ID válido",
+        duration: 3000,
+        //destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right,  black ,  grey )",
+        },
+        onClick: function () { } // Callback after click
+    }).showToast()
+}
 
 
 
@@ -93,7 +94,7 @@ function add_item_cart(add_id) {
 
     if (found == undefined) {
 
-        alert("ERROR! \n Debiste seleccionar un ID de producto válido")
+        alerta_id()
     }
 
     else {
@@ -103,23 +104,12 @@ function add_item_cart(add_id) {
         let carrito = sessionStorage.setItem("carrito", JSON.stringify(cart_array)) //Almaceno objeto found en sesion para luego construir cart en el html
 
 
-
-
-
-        alert("Se agregó al carrito el producto " + found.tipo + " " + found.char + " " + found.div + " " + found.precio)
-        
-        document.getElementById('title').innerHTML = "Tus artículos en el carrito:  <hr> "   
-        document.getElementById("carrito").innerHTML = cart()
+        alerta_producto()
+        show_Cart()
         get_del_button()
-        document.getElementById('subt').innerHTML = "Total a pagar: " + suma()
-        pagar = document.getElementById("pay")
-        pagar.style.display = "inline"
 
 
 
-
-
-        return carrito
 
     }
 
@@ -150,12 +140,40 @@ function cart() {
     let del_icon
     for (let n = 0; n < cart_array.length; n++) {
         del_icon = '</p><i value="' + n + '" class="fa-solid fa-square-xmark fa-xl" ></i></span>'
-        cart_var += "<div id='div_" + n + "'><img src='" + cart_array[n].img + "' class='cart-img'><span id='item_cart'><p><b>" + (n + 1) + ")</b> " + cart_array[n].tipo + " " + cart_array[n].char + " " + cart_array[n].div + " " + cart_array[n].precio + del_icon + "<hr></span></div>"
+        cart_var += "<div id='div_" + n + "' class='animate__animated animate__fadeInUp'><img src='" + cart_array[n].img + "' class='cart-img'><span id='item_cart'><p><b>" + (n + 1) + ")</b> " + cart_array[n].tipo + " " + cart_array[n].char + " " + cart_array[n].div + " " + cart_array[n].precio + del_icon + "<hr></span></div>"
     }
 
+    if (cart_array.length > 0 && document.URL.includes("cart.html")) {
+        document.getElementById('title').innerHTML = "Tus artículos en el carrito:  <hr> "
+        document.getElementById('subt').innerHTML = "Total a pagar: " + suma()
+        pagar = document.getElementById("pay")
+        pagar.style.display = "inline"
+
+    }
 
     return cart_var
 }
+
+function show_Cart() {
+    if (document.URL.includes("cart.html")) {
+        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:25px;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;"
+        document.getElementById("carrito").innerHTML = cart()
+
+    }
+
+
+}
+
+function empty_cart() {
+    if (document.URL.includes("cart.html")) {
+        document.getElementById("title").innerHTML = "Aún no has agregado nada al carrito"
+        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:25px;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;"
+
+    }
+
+
+}
+
 
 
 
@@ -166,8 +184,12 @@ function get_del_button() { //falta agregar que al hacer click envie el value de
     for (i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", respuesta)
         function respuesta() {
-
+            for (i = 0; i < buttons.length; i++) {
+                console.log(buttons[i].getAttribute('value'))     //obtuve todos los valores -- VER DESDE ACÁ
+            }
             alert("boton escucha")
+
+
         }
 
 
@@ -201,18 +223,6 @@ function suma() {
     return "USD " + total
 }
 
-
-
-function stock() {
-
-    let stock = "";
-    for (let i = 0; i < catalog_array.length; i++) {
-        stock += catalog_array[i].mostar_catalogo();
-    }
-
-    return stock;
-
-}
 
 
 

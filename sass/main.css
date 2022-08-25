@@ -103,6 +103,26 @@ header .nav-menu li a:hover {
   cursor: pointer;
 }
 
+.botones {
+  padding-top: 10px;
+}
+
+#button_add_cart:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+#id_add:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+#reset {
+  margin-top: 10px;
+}
+
+#reset:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
 #item_cart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,16 +167,6 @@ header .nav-menu li a:hover {
   -webkit-box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
           box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-#button_list {
-  display: inline-block;
-  background: rgba(255, 0, 0, 0.3);
-}
-
-#div_session {
-  font-size: 13px;
-  font-weight: 600;
 }
 
 #carouselExampleIndicators {

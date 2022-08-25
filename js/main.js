@@ -8,9 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
   
     sessionStorage.removeItem("IsThisFirstTime_Log_From_LiveServer"); //elimino clave-valor generada por live server
     cart_array = JSON.parse( sessionStorage.getItem('carrito') ) || [];
+    document.URL.includes("cart.html") && cart_array.length > 0 ? show_Cart() +  get_del_button() : empty_cart();
+console.log(document.URL.includes("cart.html"))
+/*  if (document.URL.includes("cart.html") && cart_array.length > 0 ) {
+    show_Cart()
+    get_del_button()
+}
+else{
+    empty_cart() 
+    console.log("nada en carrito")
+}  */
 
-
-})
+}
+)
 
 
 
