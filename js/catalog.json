@@ -1,0 +1,84 @@
+
+[
+    {
+        "id": 1,
+        "tipo": "PC",
+        "char": "INTEL I5 12600K - 16 GB RAM DDR4 3600Mhz - GTX1650 4GB GDDR5 - SSD 480 GB",
+        "div": "USD",
+        "precio": 1350,
+        "img": "../img/PC_INTEL_PROMO2.jpg"
+    },
+    {
+        "id": 2,
+        "tipo": "PC",
+        "char": "AMD RYZEN 7 5800X - 16 GB RAM DDR4 3600Mhz - GTX1660 TI 6GB GDDR5 - SSD 1TB",
+        "div": "USD",
+        "precio": 1600,
+        "img": "../img/PC_RYZEN_PROMO.webp"
+    },
+    {
+        "id": 3,
+        "tipo": "PC",
+        "char": "INTEL I7 11700F - 32 GB RAM DDR4 3600Mhz - RTX 3060 TI 8GB GDDR 6 - SSD 2TB",
+        "div": "USD",
+        "precio": 1990,
+        "img": "../img/PC_INTEL_PROMO3.jpg"
+    },
+    {
+        "id": 4,
+        "tipo": "PC",
+        "char": "INTEL I7 11700F - 32 GB RAM DDR4 3600Mhz - SSD 480 GB",
+        "div": "USD",
+        "precio": 990,
+        "img": "../img/PC_INTEL_PROMO3.jpg"
+    },
+    {
+        "id": 5,
+        "tipo": "PC",
+        "char": "INTEL I5 12600K - 16 GB RAM DDR4 3600Mhz - GTX 1660 TI 6GB GDDR5 - SSD 2TB",
+        "div": "USD",
+        "precio": 1399,
+        "img": "../img/PC_INTEL_PROMO2.jpg"
+    },
+    {
+        "id": 6,
+        "tipo": "PC",
+        "char": "INTEL I5 11400 - 32 GB RAM DDR4 3600Mhz - RTX 3060 TI 8GB GDDR 6 - SSD 2TB",
+        "div": "USD",
+        "precio": 1990,
+        "img": "../img/PC_INTEL_PROMO2.jpg"
+    },
+    {
+        "id": 7,
+        "tipo": "PC",
+        "char": "AMD RYZEN 7 5700G - 32 GB RAM DDR4 3600Mhz - SSD 2TB",
+        "div": "USD",
+        "precio": 1299,
+        "img": "../img/PC_RYZEN_PROMO.webp"
+    },
+    {
+        "id": 8,
+        "tipo": "CPU",
+        "char": "INTEL I7 12700 12 Núcleos 3.6Ghz TURBO 4.8Ghz",
+        "div": "USD",
+        "precio": 500,
+        "img": "../img/I7-12700.jpg"
+    },
+    {
+        "id": 9,
+        "tipo": "CPU",
+        "char": "AMD RYZEN 9 5950X 16 Núcleos 3.4Ghz TURBO 4.9Ghz",
+        "div": "USD",
+        "precio": 900,
+        "img": "../img/Ryzen9-5950X.jpg"
+    },
+    {
+        "id": 10,
+        "tipo": "CPU",
+        "char": "INTEL I5 11400 6 Núcleos 2.6Ghz TURBO 4.4Ghz",
+        "div": "USD",
+        "precio": 240,
+        "img": "../img/I5-11400.jpg"
+    }
+    
+]

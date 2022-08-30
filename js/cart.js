@@ -2,22 +2,6 @@
 let cart_array = [];
 let catalog_array = [];
 
-//Productos
-catalog_array.push(new catalogo(1, "PC", "INTEL I5 12600K - 16 GB RAM DDR4 3600Mhz - GTX1650 4GB GDDR5 - SSD 480 GB ", "USD", 1350, "../img/PC_INTEL_PROMO2.jpg"))
-catalog_array.push(new catalogo(2, "PC", "AMD RYZEN 7 5800X - 16 GB RAM DDR4 3600Mhz - GTX1660 TI 6GB GDDR5 - SSD 1TB ", "USD", 1600, "../img/PC_RYZEN_PROMO.webp"))
-catalog_array.push(new catalogo(3, "PC", "INTEL I7 11700F - 32 GB RAM DDR4 3600Mhz - RTX 3060 TI 8GB GDDR 6 - SSD 2TB", "USD", 1990, "../img/PC_INTEL_PROMO3.jpg"))
-catalog_array.push(new catalogo(4, "PC", "INTEL I7 11700F - 32 GB RAM DDR4 3600Mhz - SSD 480 GB", "USD", 990, "../img/PC_INTEL_PROMO3.jpg"))
-catalog_array.push(new catalogo(5, "PC", "INTEL I5 12600K - 16 GB RAM DDR4 3600Mhz - GTX 1660 TI 6GB GDDR5 - SSD 2TB", "USD", 1399, "../img/PC_INTEL_PROMO2.jpg"))
-catalog_array.push(new catalogo(6, "PC", "INTEL I5 11400 - 32 GB RAM DDR4 3600Mhz - RTX 3060 TI 8GB GDDR 6 - SSD 2TB", "USD", 1990, "../img/PC_INTEL_PROMO2.jpg"))
-catalog_array.push(new catalogo(7, "PC", "AMD RYZEN 7 5700G - 32 GB RAM DDR4 3600Mhz - SSD 2TB", "USD", 1299, "../img/PC_RYZEN_PROMO.webp"))
-catalog_array.push(new catalogo(8, "CPU", "INTEL I7 12700 12 Núcleos 3.6Ghz TURBO 4.8Ghz", "USD", 500, "../img/I7-12700.jpg"))
-catalog_array.push(new catalogo(9, "CPU", "AMD RYZEN 9 5950X 16 Núcleos 3.4Ghz TURBO 4.9Ghz ", "USD", 900, "../img/Ryzen9-5950X.jpg"))
-catalog_array.push(new catalogo(10, "CPU", "INTEL I5 11400 6 Núcleos 2.6Ghz TURBO 4.4Ghz", "USD", 240, "../img/I5-11400.jpg"))
-
-
-
-
-
 
 
 //Boton vaciar carrito (y session)
@@ -223,15 +207,6 @@ function suma() {
     return "USD " + total
 }
 
-
-
-
-
-
-
-console.log("LOG output array catálogo")
+console.log("obtengo datos de catalog.json con fetch y pusheo elementos a catalog_array")
 console.log(catalog_array)
-console.log("LOG output spread array catálogo")
-console.log(...catalog_array)
-
 
