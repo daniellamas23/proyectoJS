@@ -1,31 +1,32 @@
 .contactus__flexbox {
-    display: flex;    
-   
-    
+    display: flex;
+
+
 }
 
 .form {
-   text-align: center;
-    background-color:rgba(0,0,0,.35);   
+    text-align: center;
+    background-color: rgba(0, 0, 0, .35);
     border-radius: 10px;
-    padding:15px;
+    padding: 15px;
     margin-left: 10%;
-    margin-right:5%;
-    
-   
+    margin-right: 5%;
+
+
 }
 
 #_subject {
     width: 300px;
 }
 
-.contactus_title {
-   padding: 10px 0 10px 30px;
+.contactus_title {    
     @include titulos;
+    max-width:150px;
+    margin:2%;
+    
 }
 
 .contactus_buttons {
-
     padding-left: 15%;
 
 }
@@ -54,21 +55,20 @@
 
 
 .mapouter {
-    position: relative;    
+    position: relative;
     height: 100%;
     width: 80%;
-    margin:0 15px 0 15px;
+    margin: 0 15px 0 15px;
 
-    
+
 
     .gmap_canvas {
-       overflow: hidden;
+        overflow: hidden;
         background: none !important;
         height: 100%;
         width: 100%;
-        padding-right:10%;
+        padding-right: 10%;
     }
 
-    
-}
 
+}

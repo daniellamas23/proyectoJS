@@ -11,9 +11,22 @@ class catalogo {  //Constructor de objetos catalogos
         this.img = img;
     }
 
-    mostar_catalogo() {
+}
 
-        return this.id + ") " + this.tipo + " " + this.char + "\n " + this.div + " " + this.precio + "\n";
+
+
+//Constructor de objetos con clase
+class usuario {
+
+    constructor(user, pass) {
+
+        this.user = user
+        this.pass = pass
+
+    }
+
+    bienvenida() {
+        return this.user
     }
 
 }

@@ -29,7 +29,7 @@
       margin:2%;
     }
 
- 
+
 
 }
 
@@ -45,6 +45,10 @@
         text-align: center;
 
     }
+    .market__cards {
+        grid-template-columns: 1fr !important;
+    }
+
 }
 
 
@@ -77,8 +81,9 @@
 
                 a {
                     font-size: 14px;
-                    color: black;
+                    color:rgba(255,255,255,.5);
                     text-shadow: 0.5px 0.5px 5px rgba(0,0,0,.40);
+                    letter-spacing: 0.05rem;
                 }
             }
 
@@ -87,7 +92,9 @@
 
 
     }
-
+    .market__cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    }
 
 }
 

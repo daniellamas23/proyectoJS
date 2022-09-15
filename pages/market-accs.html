@@ -29,7 +29,8 @@
    <header class="animate__animated animate__fadeInDown">
       <nav>
          <div>
-            <label class="logo animate__animated animate__backInLeft"><a href="../index.html"><img src="../img/logo.png"></a></label>
+            <label class="logo animate__animated animate__backInLeft"><a href="../index.html"><img
+                     src="../img/logo.png"></a></label>
          </div>
          <input type="checkbox" id="check">
          <label for="check" class="bar-btn">
@@ -41,6 +42,8 @@
             <li><a class="active" href="./market.html">tienda</a></li>
             <li><a href="./aboutus.html">sobre nosotros</a></li>
             <li><a href="./contactus.html">contacto</a></li>
+            <li><a href="./cart.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a></li>
+
          </ul>
 
       </nav> <!-- barra de navegación-->
@@ -62,6 +65,9 @@
          <a class="nav-link active" href="./market-accs.html">Periféricos</a>
       </li>
    </ul>
+
+   <section id="market_gen" class="market__section"></section>
+
 
    <section class="market__section">
       <div class="market_product animate__animated animate__backInUp animate__delay-0.8s">
@@ -131,8 +137,7 @@
 
 
 
-   <footer id="_footer" data-aos="fade-right"
-   data-aos-anchor-placement="bottom-bottom">
+   <footer id="_footer" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
       <a href="http://www.instagram.com"> <i class="fa-brands fa-instagram fa-2xl icon-ig"></i></a>
       <a href="http://www.twitter.com"><i class="fa-brands fa-twitter fa-2xl icon-tw"></i></a>
       <a href="http://www.whatsapp.com"><i class="fa-brands fa-whatsapp fa-2xl icon-wpp"></i></a>
@@ -146,7 +151,11 @@
    </footer> <!-- pie de página  -->
    <script>
       AOS.init();
-    </script>
+   </script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   <script src="../js/class.js"></script>
+   <script src="../js/cart.js"></script>
+   <script src="../js/main.js"></script>
 </body>
 
 </html>

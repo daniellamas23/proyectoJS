@@ -1,12 +1,21 @@
 @mixin titulos {
     font-size: 24px;
-    font-weight: 600;
-    text-shadow: -2px -2px 4px rgba(255, 0, 0, 1), 2px 2px 6px black, 2px 3px #fff;
-    letter-spacing:2.5px;
-   
+    padding: 0;
+    text-align: center;
+    text-shadow: 0px 3px 9px white;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3%;
+    letter-spacing: 1.5px;
+  }
 
 
-}
+
+
+
+$colores: (
+    fondo1:skyblue,
+    fondo2:white,
+);
 
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swa);
 
@@ -20,10 +29,7 @@
 @import 'aboutus';
 @import 'thanks';
 
-$colores: (
-    fondo1:skyblue,
-    fondo2:white,
-);
+
 
 
 $redes: (
@@ -53,5 +59,5 @@ $valor in $redes {
 body {
     font-family: "MontSerrat", sans-serif !important;
     background: linear-gradient(to bottom, map-get($colores, fondo1), map-get($colores, fondo2), map-get($colores, fondo1));
-    overflow-x:hidden;
-   }
+    overflow-x: hidden;
+}

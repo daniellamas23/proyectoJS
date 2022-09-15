@@ -6,18 +6,27 @@
 
 .aboutus_aboutus    {
     @extend .contactus_title ;
-    margin-left: 3.5%;
-    padding:1%; 
-    padding-top:2%;
+    margin:2%;
+    max-width:220px;
+
     
 }
 
 .card-title {
     @extend .contactus_title ;
+    margin:5% auto;
+    max-width: 250px;    
+    padding: 1%;     
+    
+    
 }
 
 .card_aboutus {
     max-width: 840px;
-    margin:5% auto 5% auto;
+    margin:3% auto;
       
+}
+
+.card-text {
+    padding-top:3%;
 }

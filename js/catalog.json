@@ -1,8 +1,7 @@
-
 [
     {
         "id": 1,
-        "tipo": "PC",
+        "tipo": "OFERTA",       
         "char": "INTEL I5 12600K - 16 GB RAM DDR4 3600Mhz - GTX1650 4GB GDDR5 - SSD 480 GB",
         "div": "USD",
         "precio": 1350,
@@ -10,15 +9,15 @@
     },
     {
         "id": 2,
-        "tipo": "PC",
-        "char": "AMD RYZEN 7 5800X - 16 GB RAM DDR4 3600Mhz - GTX1660 TI 6GB GDDR5 - SSD 1TB",
+        "tipo": "OFERTA",
+        "char": "AMD  RYZEN 7 5800X - 16 GB RAM DDR4 3600Mhz - GTX1660 TI 6GB GDDR5 - SSD 1TB",
         "div": "USD",
         "precio": 1600,
         "img": "../img/PC_RYZEN_PROMO.webp"
     },
     {
         "id": 3,
-        "tipo": "PC",
+        "tipo": "OFERTA",
         "char": "INTEL I7 11700F - 32 GB RAM DDR4 3600Mhz - RTX 3060 TI 8GB GDDR 6 - SSD 2TB",
         "div": "USD",
         "precio": 1990,
@@ -26,7 +25,7 @@
     },
     {
         "id": 4,
-        "tipo": "PC",
+        "tipo": "OFERTA",
         "char": "INTEL I7 11700F - 32 GB RAM DDR4 3600Mhz - SSD 480 GB",
         "div": "USD",
         "precio": 990,
@@ -34,7 +33,7 @@
     },
     {
         "id": 5,
-        "tipo": "PC",
+        "tipo": "OFERTA",
         "char": "INTEL I5 12600K - 16 GB RAM DDR4 3600Mhz - GTX 1660 TI 6GB GDDR5 - SSD 2TB",
         "div": "USD",
         "precio": 1399,
@@ -42,7 +41,7 @@
     },
     {
         "id": 6,
-        "tipo": "PC",
+        "tipo": "OFERTA",
         "char": "INTEL I5 11400 - 32 GB RAM DDR4 3600Mhz - RTX 3060 TI 8GB GDDR 6 - SSD 2TB",
         "div": "USD",
         "precio": 1990,
@@ -50,14 +49,22 @@
     },
     {
         "id": 7,
-        "tipo": "PC",
-        "char": "AMD RYZEN 7 5700G - 32 GB RAM DDR4 3600Mhz - SSD 2TB",
+        "tipo": "OFERTA",
+        "char": "AMD  RYZEN 7 5700G - 32 GB RAM DDR4 3600Mhz - SSD 2TB",
         "div": "USD",
         "precio": 1299,
         "img": "../img/PC_RYZEN_PROMO.webp"
     },
     {
         "id": 8,
+        "tipo": "OFERTA",
+        "char": "AMD  RYZEN 7 5700X - 32 GB RAM DDR4 3600Mhz - RTX 3060 - SSD 2TB",
+        "div": "USD",
+        "precio": 1700 ,
+        "img": "../img/PC_RYZEN_PROMO.webp"
+    },
+    {
+        "id": 9,
         "tipo": "CPU",
         "char": "INTEL I7 12700 12 Núcleos 3.6Ghz TURBO 4.8Ghz",
         "div": "USD",
@@ -65,7 +72,7 @@
         "img": "../img/I7-12700.jpg"
     },
     {
-        "id": 9,
+        "id": 10,
         "tipo": "CPU",
         "char": "AMD RYZEN 9 5950X 16 Núcleos 3.4Ghz TURBO 4.9Ghz",
         "div": "USD",
@@ -73,12 +80,134 @@
         "img": "../img/Ryzen9-5950X.jpg"
     },
     {
-        "id": 10,
+        "id": 11,
         "tipo": "CPU",
         "char": "INTEL I5 11400 6 Núcleos 2.6Ghz TURBO 4.4Ghz",
         "div": "USD",
         "precio": 240,
         "img": "../img/I5-11400.jpg"
-    }
+    },
+    {
+        "id": 12,
+        "tipo": "CPU",
+        "char": "RYZEN 7 5700X 8 Núcleos 3.4Ghz TURBO 4.6Ghz",
+        "div": "USD",
+        "precio": 399,
+        "img": "../img/Ryzen7-5700x.jpg"
+    },
+    {
+        "id": 13,
+        "tipo": "CPU",
+        "char": "INTEL I7 11700F 8 Núcleos 2.5Ghz TURBO 4.9Ghz",
+        "div": "USD",
+        "precio": 449,
+        "img": "../img/I7-11700F.jpg"
+    },
+    {
+        "id": 14,
+        "tipo": "CPU",
+        "char": "RYZEN 7 5800X 6 Núcleos 3.7Ghz TURBO 4.6Ghz",
+        "div": "USD",
+        "precio": 499,
+        "img": "../img/Ryzen7-5800x.jpg"
+    },
+    {
+        "id": 15,
+        "tipo": "PC",
+        "char": "PC Intel I7 - 16GB RAM DDR4 3600Mhz - RTX 3070 TI - 1TB SSD",
+        "div": "USD",
+        "precio": 1790 ,
+        "img": "../img/Equipo_INTEL-1-2-2-1-300x300.jpg"
+    },
+    {
+        "id": 16,
+        "tipo": "PC",
+        "char": "PC Ryzen 7 - 16GB RAM DDR4 3200Mhz - GTX 1660 - 512 SSD ",
+        "div": "USD",
+        "precio": 1299,
+        "img": "../img/equipo_amdeqradryz-300x300.jpg"
+    },
+    {
+        "id": 17,
+        "tipo": "PC",
+        "char": "PC Intel I9 - 32GB RAM DDR4 3600MHZ - RTX 3070 - 2TB SSD",
+        "div": "USD",
+        "precio": 2190,
+        "img": "../img/equipo_intel_core.jpg"
+    },
+    {
+        "id": 18,
+        "tipo": "PC",
+        "char": "PC Intel I7 - 16GB RAM DDR4 3600MHZ - RTX 3060 - 1TB SSD",
+        "div": "USD",
+        "precio": 1650,
+        "img": "../img/equipo_intel_core.jpg"
+    },
+    {
+        "id": 19,
+        "tipo": "PC",
+        "char": "PC RYZEN 5 - 16GB RAM DDR4 3200MHZ - GTX 1660 - 1TB SSD",
+        "div": "USD",
+        "precio": 1250,
+        "img": "../img/equipo_amdeqradryz-300x300.jpg"
+    },
+    {
+        "id": 20,
+        "tipo": "PC",
+        "char": "PC RYZEN 5 - 16GB RAM DDR4 3200MHZ - RTX 3050  - 2TB SSD",
+        "div": "USD",
+        "precio": 1420,
+        "img": "../img/equipo_amdeqradryz-300x300.jpg"
+    },
+    {
+        "id": 21,
+        "tipo": "PERIFERICOS",
+        "char": "TECLADO CORSAIR-COMBO K55+HARPOON",
+        "div": "USD",
+        "precio": 75,
+        "img": "../img/Corsair-COMBO-K55+HARPOON.jpg"
+    },
+    {
+        "id": 22,
+        "tipo": "PERIFERICOS",
+        "char": "TECLADO AORUS K1",
+        "div": "USD",
+        "precio": 100,
+        "img": "../img/Keyboard-AORUS-K1.jpg"
+    },
+    {
+        "id": 23,
+        "tipo": "PERIFERICOS",
+        "char": "TECLADO ASUS ROG X803 STRIX",
+        "div": "USD",
+        "precio": 135,
+        "img": "../img/Keyboard-ASUS-ROGX803-STRIX.jpg"
+    },
+    {
+        "id": 24,
+        "tipo": "PERIFERICOS",
+        "char": "TECLADO ASUS ROG XA01 STRIX",
+        "div": "USD",
+        "precio": 145,
+        "img": "../img/Keyboard-ASUS-ROGXA01-STRIX.jpg"
+    },
+    {
+        "id": 25,
+        "tipo": "PERIFERICOS",
+        "char": "TECLADO MEETION - COMBO MOUSE PAD Y AURICULARES",
+        "div": "USD",
+        "precio": 65,
+        "img": "../img/Keyboard-Meetion.jpg"
+    },
+    {
+        "id": 26,
+        "tipo": "PERIFERICOS",
+        "char": "TECLADO MEETION MTMK007",
+        "div": "USD",
+        "precio": 40,
+        "img": "../img/Keyboard-Meetion-MTMK007.jpg"
+    }   
+    
+    
     
 ]

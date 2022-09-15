@@ -74,10 +74,10 @@ header .nav-menu li {
 }
 
 header .nav-menu li a {
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 900;
   text-decoration: none;
 }
 
@@ -101,18 +101,6 @@ header .nav-menu li a:hover {
 #carrito i {
   margin-left: 2%;
   cursor: pointer;
-}
-
-.botones {
-  padding-top: 10px;
-}
-
-#button_add_cart:hover {
-  background-color: rgba(255, 0, 0, 0.3);
-}
-
-#id_add:hover {
-  background-color: rgba(255, 0, 0, 0.3);
 }
 
 #reset {
@@ -169,22 +157,98 @@ header .nav-menu li a:hover {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.login {
+  border: none !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.login:hover {
+  background-color: rgba(9, 255, 0, 0.25) !important;
+}
+
+#user {
+  text-align: center;
+  border-radius: 5px;
+  max-width: 55%;
+  border: 1px solid black;
+  margin: 2%;
+}
+
+#pass {
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 2%;
+  max-width: 55%;
+}
+
+.container_login {
+  width: 33%;
+  position: absolute;
+  z-index: 1;
+  margin-left: 33%;
+}
+
+.btn_login {
+  max-width: 55%;
+  margin-top: 10%;
+  padding: 1% 8%;
+  background: rgba(33, 255, 13, 0.661);
+  border: 0;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.popup {
+  position: relative;
+  padding-top: 20px;
+  height: 250px;
+  background: #fff;
+  border-radius: 6px;
+  text-align: center;
+  border: 2px solid rgba(0, 180, 183, 0.8);
+  -webkit-transform: translate(0, -80%) scale(0.1);
+          transform: translate(0, -80%) scale(0.1);
+  visibility: hidden;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.open_popup {
+  visibility: visible;
+  -webkit-transform: translate(0, 0) scale(1);
+          transform: translate(0, 0) scale(1);
+  margin-top: 5%;
+}
+
+#div_cross {
+  text-align: right;
+  position: relative;
+  top: -20px;
+}
+
 #carouselExampleIndicators {
   margin: auto;
-  padding: 5%;
-  margin-top: 5%;
-  max-width: 100vw;
+  margin-top: 1%;
+  max-width: 97vw;
   max-height: 768px;
 }
 
 #carouselExampleIndicators .carousel-inner img {
   width: 750px;
   height: 380px;
-  border-radius: 4%;
+  border-radius: 20px;
 }
 
-.form_login {
+#index_alert {
   text-align: center;
+  margin: 2%;
 }
 
 .index__main {
@@ -198,19 +262,17 @@ header .nav-menu li a:hover {
   margin: auto;
   margin-top: 2%;
   border-radius: 25px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 2px 2px 5px;
-          box-shadow: 2px 2px 5px;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
 }
 
 .index__main ol {
-  letter-spacing: 2px;
+  letter-spacing: 0.8px;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
 
 .index__main h3 {
-  font-weight: 900;
-  text-shadow: 1px 1px 3px grey;
-  letter-spacing: 2.2x;
+  text-shadow: 0px 0px 6px white;
 }
 
 .index__main .fa-hand-pointer {
@@ -260,6 +322,10 @@ header .nav-menu li a:hover {
   .market_product {
     text-align: center;
   }
+  .market__cards {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
 }
 
 @media screen and (min-width: 720px) {
@@ -289,8 +355,13 @@ header .nav-menu li a:hover {
   }
   nav .nav-menu li a {
     font-size: 14px;
-    color: black;
+    color: rgba(255, 255, 255, 0.5);
     text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.05rem;
+  }
+  .market__cards {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
   }
 }
 
@@ -354,6 +425,10 @@ header .nav-menu li a:hover {
 }
 
 .market__cards {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   padding-top: 1%;
 }
 
@@ -372,22 +447,44 @@ header .nav-menu li a:hover {
   grid-column-gap: 2.5%;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding-top: 5%;
 }
 
 .market_product {
   text-align: center;
+  border: 5px solid rgba(0, 0, 0, 0.07);
+  border-radius: 10%;
+  -webkit-box-shadow: 0px 0px 15px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px 12px rgba(0, 0, 0, 0.1);
+  margin: 5%;
 }
 
 .market_product .product {
-  border: 1px solid black;
+  max-width: 60%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 15%;
-  margin: 1%;
+  margin: 5%;
+}
+
+.market_product h6 {
+  font-weight: 600;
+  text-shadow: -1px -1px 3px grey;
 }
 
 .card {
   margin: 10px;
   padding: 10px;
+}
+
+.card-title-market {
+  font-weight: 600;
+  text-shadow: 1px 1px 3px grey;
+  font-size: 1.22rem;
+}
+
+.btn-primary {
+  margin: 10%;
 }
 
 .contactus__flexbox {
@@ -410,11 +507,15 @@ header .nav-menu li a:hover {
 }
 
 .contactus_title, .aboutus_aboutus, .card-title {
-  padding: 10px 0 10px 30px;
   font-size: 24px;
-  font-weight: 600;
-  text-shadow: -2px -2px 4px red, 2px 2px 6px black, 2px 3px #fff;
-  letter-spacing: 2.5px;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0px 3px 9px white;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3%;
+  letter-spacing: 1.5px;
+  max-width: 150px;
+  margin: 2%;
 }
 
 .contactus_buttons {
@@ -450,14 +551,23 @@ header .nav-menu li a:hover {
 }
 
 .aboutus_aboutus {
-  margin-left: 3.5%;
+  margin: 2%;
+  max-width: 220px;
+}
+
+.card-title {
+  margin: 5% auto;
+  max-width: 250px;
   padding: 1%;
-  padding-top: 2%;
 }
 
 .card_aboutus {
   max-width: 840px;
-  margin: 5% auto 5% auto;
+  margin: 3% auto;
+}
+
+.card-text {
+  padding-top: 3%;
 }
 
 /* css thanks */
@@ -468,9 +578,12 @@ header .nav-menu li a:hover {
 
 .thanks_comment h2 {
   font-size: 24px;
-  font-weight: 600;
-  text-shadow: -2px -2px 4px red, 2px 2px 6px black, 2px 3px #fff;
-  letter-spacing: 2.5px;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0px 3px 9px white;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3%;
+  letter-spacing: 1.5px;
 }
 
 .icon-ig {
