@@ -63,11 +63,11 @@ transition: transform 1s
 .open_popup {
     visibility:visible;
     transform: translate(0,0) scale(1);
-    margin-top:5%;
+  
 
 }
 
-#div_cross {
+#div_cross {   
     text-align:right;
     position:relative;
     top:-20px;

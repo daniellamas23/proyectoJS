@@ -90,6 +90,7 @@ function crear_usuario() {
         function login_sucesfull() {
             let bienvenida = document.getElementById("bienvenido")
             bienvenido.innerText = "Bienvenido " + user1.bienvenida() + " !!!"
+            bienvenido.style = "text-align:center;font-size:16px;font-weight:600;text-shadow:-1px 1px 3px grey;padding-top: 3%;"
             boton = document.getElementById("button_cart")
             boton.style = "text-align:center;"
             document.getElementById("tick").style = "display:inline;max-width:15%;margin-right: 35%;"
