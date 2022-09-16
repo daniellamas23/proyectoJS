@@ -17,7 +17,9 @@ function cargar_catalogo() {
         })
 
     }).then(() => {
-        market()
+        market()      
+    }).then(() => {
+        button_add_cart()      
     })
 }
 document.URL.includes("index.html") ? "" : cargar_catalogo(); //Evito error en index porque no encuentra la ruta para catalog.json

@@ -136,9 +136,13 @@ header .nav-menu li a:hover {
 
 #pay {
   font-weight: 600;
-  color: green;
-  -webkit-box-shadow: 5px 5px 5px;
-          box-shadow: 5px 5px 5px;
+  color: black;
+  width: 10%;
+  border-radius: 9px;
+}
+
+#pay:hover {
+  background: rgba(32, 255, 0, 0.6);
 }
 
 #subt {

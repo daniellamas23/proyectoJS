@@ -28,7 +28,7 @@ function alerta_producto() {
         duration: 2000,
         newWindow: true,
         close: true,
-        gravity: "bottom", // `top` or `bottom`
+        gravity: "top", // `top` or `bottom`
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
@@ -80,6 +80,23 @@ function alerta_del() {
     }).showToast()
 }
 
+
+
+function button_add_cart() {
+
+        let add_cart = document.getElementsByClassName("add_cart");
+
+        Object.keys(add_cart).forEach(function (element) {
+            add_cart[element].addEventListener("click", function (evento) {
+                add_cart_click = evento.target
+                id = add_cart_click.getAttribute('id')
+              
+                add_item_cart(parseInt(id))
+
+            })
+
+        });
+    }
 
 
 
@@ -137,9 +154,9 @@ function market() {
             <div class="card" data-aos="zoom-in">
             <a href="#"><img src="${element.img}" class="card-img-top" alt="${element.tipo} ${element.id}"></a>
             <div class="card-body">
-              <h5 class="card-title-market">${element.tipo} PC GAMER ${element.char.substr(0,5)} <p><b>${element.precio} ${element.div} </b></p>
+              <h5 class="card-title-market">${element.tipo} PC GAMER ${element.char.substr(0, 5)} <p><b>${element.precio} ${element.div} </b></p>
               </h5>
-              <p class="card-text-market">Especificaciones: ${element.char} </p><a class="btn btn-primary" role="button" id="${element.id} " href="javascript:add_item_cart(${element.id})">Agregar al carrito</a>
+              <p class="card-text-market">Especificaciones: ${element.char} </p><a class="btn btn-primary add_cart" role="button" id="${element.id} ">Agregar al carrito</a>
               <p class="card-text-market"><small class="text-muted">Oferta hasta agotar stock</small></p>
             </div>
           </div>
@@ -150,10 +167,10 @@ function market() {
 
     }
 
-    
+
     function market_boxmodel(tipo) {
         let cat_array = catalog_array.filter(element => element.tipo === tipo)
-       
+
         let dom = document.getElementById("market_gen")
 
         cat_array.forEach(element => {
@@ -161,16 +178,16 @@ function market() {
         <a href="#">
            <img src="${element.img} " alt="${element.char} " class="product">
         </a>
-        <h6>PC Intel I7 - 16GB - RTX 3070 TI - 1TB SSD</h6>
-        <p><b>1790 USD</b></p>
-        <a class="btn btn-primary" role="button" id="${element.id} " href="javascript:add_item_cart(${element.id})">Agregar al carrito</a>
-     </div>` 
+        <h6>${element.char}</h6>
+        <p><b>${element.precio} ${element.div}  </b></p>
+        <a class="btn btn-primary add_cart" role="button" id="${element.id}">Agregar al carrito</a>
+     </div>`
 
-    })
+        })
 
 
 
-}
+    }
 }
 
 
