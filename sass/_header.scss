@@ -1,11 +1,11 @@
 header {
     position: relative;
-    width:100vw;
+    width: 100vw;
     height: 100%;
     z-index: 100;
-    background-color: rgba(0, 0, 0, 0.25) ;
+    background-color: rgba(0, 0, 0, 0.25);
     box-shadow: 5px 0 10px rgba(0, 0, 0, .9);
-    
+
 
     nav {
         height: 100px;
@@ -15,26 +15,27 @@ header {
         align-items: center;
 
         .logo {
-            position:relative;
+            position: relative;
             z-index: 1000;
         }
 
         .logo img {
-            width:100%;                  
-           padding-left:30px;
-           
+            width: 100%;
+            padding-left: 30px;
+
         }
+
         #check {
             display: none;
         }
-    
+
         #check:checked~.nav-menu {
             height: 100vh;
         }
-    
+
         #check:checked~.nav-menu li {
             display: block;
-    
+
         }
     }
 
@@ -42,7 +43,6 @@ header {
         font-size: 25px;
         color: rgb(0, 0, 0);
         margin-right: 3%;
-        padding-left:35%;
         cursor: pointer;
     }
 
@@ -63,12 +63,12 @@ header {
             transition: all .5s;
 
             a {
-                color:rgba(255,255,255,.5);
+                color: rgba(255, 255, 255, .5);
                 font-size: 16px;
                 text-transform: uppercase;
                 font-weight: 900;
                 text-decoration: none;
-               //  0.05rem
+                //  0.05rem
             }
 
             .active,
@@ -80,6 +80,22 @@ header {
         }
     }
 }
+
+.login_btn_responsive {
+        position: fixed;
+        display: inline!important;
+        top: -120px;
+        right: 170px;    
+    }
+
+.cart_responsive {  
+    position: fixed;
+    display: inline!important;
+    top: -115px;
+    right: 75px;    
+}
+
+
 
 .fa-solid {
     margin-right: 10px;

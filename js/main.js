@@ -32,9 +32,7 @@ login === null ? "" :
         if (user_array.length > 0) {
             sessionStorage.removeItem("user")
             sessionStorage.removeItem('carrito')
-            document.getElementById("login_btn").innerText = "Login"
-            document.getElementById("login_btn").classList.remove("logout")
-            document.getElementById('counter').innerText = ""
+            document.location.reload()
            
 
         }
@@ -53,7 +51,7 @@ close_popup === null ? "" :
 
 
 
-// Evento que se dispara cuadno se carga la pagina
+// Evento que se dispara cuando se carga la pagina
 document.addEventListener('DOMContentLoaded', () => {
 
     sessionStorage.removeItem("IsThisFirstTime_Log_From_LiveServer"); //elimino clave-valor generada por live server
@@ -66,8 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("login_btn").innerText = "Logout"
         document.getElementById("login_btn").classList.add("logout")        
     }
-
-
+    if(window.innerWidth < 871) {
+        document.getElementById("cart_li").classList.add("cart_responsive")
+        if(document.URL.includes("index.html")) {
+            document.getElementById("login_li").classList.add("login_btn_responsive")
+        }
+    }
 
 }
 )

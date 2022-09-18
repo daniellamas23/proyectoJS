@@ -29,6 +29,10 @@
       margin:2%;
     }
 
+    #pay_popup {
+        min-width:300px;
+        margin:10px 20px;
+    }
 
 
 }
@@ -40,6 +44,17 @@
         text-align: center;
 
     }
+    .container_login {
+        width:100%;
+        max-width: 100vh;
+        margin-left:0;
+    }
+
+    .popup{
+        width:100%;
+        max-width: 100vh;
+    }
+   
 
     .market_product {
         text-align: center;
@@ -53,7 +68,7 @@
 
 
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 870px) {
 
     nav {
         height: 100px;
@@ -68,15 +83,15 @@
             top: 0;
             background: none;
             transition: none;
-            text-align: right;
-            margin-right: 50px;
-            padding-right: 40px;
+            text-align: right;           
+            padding-right: 15px;
+            
 
 
             li {
                 display: inline-block;
                 line-height: 100px;
-                margin: 0 25px;
+                margin: 0 16px;
                 transition: none;
 
                 a {
@@ -95,7 +110,14 @@
     .market__cards {
         grid-template-columns: 1fr 1fr 1fr 1fr !important;
     }
-
+    #item_cart p {
+        font-size:18px;
+       letter-spacing: 2px;
+    
+      }
+.cart-img {
+    max-width: 35%;
+}
 }
 
 @media screen and (max-width:940px) {

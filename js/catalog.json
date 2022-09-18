@@ -114,7 +114,7 @@
     {
         "id": 15,
         "tipo": "PC",
-        "char": "PC Intel I7 - 16GB RAM DDR4 3600Mhz - RTX 3070 TI - 1TB SSD",
+        "char": "INTEL I7 - 16GB RAM DDR4 3600Mhz - RTX 3070 TI - 1TB SSD",
         "div": "USD",
         "precio": 1790 ,
         "img": "../img/Equipo_INTEL-1-2-2-1-300x300.jpg"
@@ -122,7 +122,7 @@
     {
         "id": 16,
         "tipo": "PC",
-        "char": "PC Ryzen 7 - 16GB RAM DDR4 3200Mhz - GTX 1660 - 512 SSD ",
+        "char": "RYZEN 7 - 16GB RAM DDR4 3200Mhz - GTX 1660 - 512 SSD ",
         "div": "USD",
         "precio": 1299,
         "img": "../img/equipo_amdeqradryz-300x300.jpg"
@@ -130,7 +130,7 @@
     {
         "id": 17,
         "tipo": "PC",
-        "char": "PC Intel I9 - 32GB RAM DDR4 3600MHZ - RTX 3070 - 2TB SSD",
+        "char": "INTEL I9 - 32GB RAM DDR4 3600MHZ - RTX 3070 - 2TB SSD",
         "div": "USD",
         "precio": 2190,
         "img": "../img/equipo_intel_core.jpg"
@@ -138,7 +138,7 @@
     {
         "id": 18,
         "tipo": "PC",
-        "char": "PC Intel I7 - 16GB RAM DDR4 3600MHZ - RTX 3060 - 1TB SSD",
+        "char": "INTEL I7 - 16GB RAM DDR4 3600MHZ - RTX 3060 - 1TB SSD",
         "div": "USD",
         "precio": 1650,
         "img": "../img/equipo_intel_core.jpg"
@@ -146,7 +146,7 @@
     {
         "id": 19,
         "tipo": "PC",
-        "char": "PC RYZEN 5 - 16GB RAM DDR4 3200MHZ - GTX 1660 - 1TB SSD",
+        "char": "RYZEN 5 - 16GB RAM DDR4 3200MHZ - GTX 1660 - 1TB SSD",
         "div": "USD",
         "precio": 1250,
         "img": "../img/equipo_amdeqradryz-300x300.jpg"
@@ -154,7 +154,7 @@
     {
         "id": 20,
         "tipo": "PC",
-        "char": "PC RYZEN 5 - 16GB RAM DDR4 3200MHZ - RTX 3050  - 2TB SSD",
+        "char": "RYZEN 5 - 16GB RAM DDR4 3200MHZ - RTX 3050  - 2TB SSD",
         "div": "USD",
         "precio": 1420,
         "img": "../img/equipo_amdeqradryz-300x300.jpg"

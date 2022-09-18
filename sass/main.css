@@ -49,7 +49,6 @@ header .bar-btn {
   font-size: 25px;
   color: black;
   margin-right: 3%;
-  padding-left: 35%;
   cursor: pointer;
 }
 
@@ -88,6 +87,20 @@ header .nav-menu li a:hover {
   transition: .3s;
 }
 
+.login_btn_responsive {
+  position: fixed;
+  display: inline !important;
+  top: -120px;
+  right: 170px;
+}
+
+.cart_responsive {
+  position: fixed;
+  display: inline !important;
+  top: -115px;
+  right: 75px;
+}
+
 .fa-solid {
   margin-right: 10px;
 }
@@ -96,6 +109,7 @@ header .nav-menu li a:hover {
   margin: 1%;
   letter-spacing: 2px;
   text-shadow: 1px 1px 3px black;
+  margin-bottom: 10%;
 }
 
 #carrito i {
@@ -107,12 +121,16 @@ header .nav-menu li a:hover {
   margin-right: 10px;
   font-weight: 600;
   color: black;
-  width: 10%;
   border-radius: 9px;
 }
 
 #reset:hover {
   background-color: rgba(255, 0, 0, 0.3);
+}
+
+#item_cart p {
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
 #item_cart {
@@ -132,6 +150,7 @@ header .nav-menu li a:hover {
   color: white;
   font-weight: 600;
   background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 8px;
 }
 
 #item_cart i:hover {
@@ -146,8 +165,8 @@ header .nav-menu li a:hover {
   position: absolute;
   padding-top: 20px;
   height: 300px;
-  max-width: 30%;
-  margin: 0 auto 10px;
+  max-width: 100vh;
+  margin: 10px auto;
   background: #fff;
   border-radius: 6px;
   text-align: center;
@@ -172,7 +191,7 @@ header .nav-menu li a:hover {
   margin: 0 auto;
   font-weight: 600;
   color: black;
-  width: 10%;
+  width: 20%;
   border-radius: 9px;
 }
 
@@ -180,20 +199,26 @@ header .nav-menu li a:hover {
   background: rgba(32, 255, 0, 0.6);
 }
 
+#_subject {
+  max-width: 200px;
+}
+
 #subt {
   text-align: center;
   font-weight: 600;
+  margin-top: 25%;
+  margin-bottom: 15%;
 }
 
 .cart-img {
   display: block;
-  max-width: 25%;
-  margin: 1% auto;
+  max-width: 40%;
   background-color: white;
   border-radius: 10%;
   -webkit-box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
           box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 10% auto 5%;
 }
 
 .login {
@@ -235,7 +260,7 @@ header .nav-menu li a:hover {
 }
 
 .btn_login {
-  max-width: 55%;
+  max-width: 100%;
   margin-top: 10%;
   padding: 1% 8%;
   background: rgba(33, 255, 13, 0.661);
@@ -249,6 +274,8 @@ header .nav-menu li a:hover {
 .popup {
   position: relative;
   padding-top: 20px;
+  width: 150%;
+  max-width: 400px;
   height: 250px;
   background: #fff;
   border-radius: 6px;
@@ -353,6 +380,10 @@ header .nav-menu li a:hover {
   .index__main {
     margin: 2%;
   }
+  #pay_popup {
+    min-width: 300px;
+    margin: 10px 20px;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -360,6 +391,15 @@ header .nav-menu li a:hover {
     -ms-grid-columns: 1fr 1fr !important;
         grid-template-columns: 1fr 1fr !important;
     text-align: center;
+  }
+  .container_login {
+    width: 100%;
+    max-width: 100vh;
+    margin-left: 0;
+  }
+  .popup {
+    width: 100%;
+    max-width: 100vh;
   }
   .market_product {
     text-align: center;
@@ -370,7 +410,7 @@ header .nav-menu li a:hover {
   }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 870px) {
   nav {
     height: 100px;
   }
@@ -385,13 +425,12 @@ header .nav-menu li a:hover {
     -webkit-transition: none;
     transition: none;
     text-align: right;
-    margin-right: 50px;
-    padding-right: 40px;
+    padding-right: 15px;
   }
   nav .nav-menu li {
     display: inline-block;
     line-height: 100px;
-    margin: 0 25px;
+    margin: 0 16px;
     -webkit-transition: none;
     transition: none;
   }
@@ -404,6 +443,13 @@ header .nav-menu li a:hover {
   .market__cards {
     -ms-grid-columns: 1fr 1fr 1fr 1fr !important;
         grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+  #item_cart p {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .cart-img {
+    max-width: 35%;
   }
 }
 

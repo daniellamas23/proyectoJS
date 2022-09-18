@@ -28,23 +28,12 @@ pay_btn === null ? "" :
 
         if (document.querySelectorAll('input[type="checkbox"]:checked').length > 0) {
 
-            alert("PAGO REALIZADO CON ÉXITO!! \n SE RECARGARÁ LA PÁGINA")
+            alert("PAGO REALIZADO CON ÉXITO!!")
             sessionStorage.removeItem("carrito")
             document.location.reload()
         }
-        else {
+       
 
-        }
-
-
-        /*       if (document.getElementById("check").checked) {
-                  console.log(document.getElementById("check").checked)
-                  console.log("está clickeada")
-              }
-             else {
-              console.log(document.getElementById("check"))
-                  console.log("no está clickeada")
-              } */
 
     })
 
@@ -161,7 +150,7 @@ function add_item_cart(add_id) {
 
 
 
-//Funcion generadora de catalogos en DOM , BOOTSTRAP Y BOX MODELING
+//Funcion generadora de catalogos en DOM : BOOTSTRAP Y BOX MODELING
 function market() {
     let of = "OFERTA"
     let pc = "PC"
@@ -232,7 +221,7 @@ function cart() {
     let del_icon
     for (let n = 0; n < cart_array.length; n++) {
         del_icon = '</p><i value="' + n + '" class="fa-solid fa-square-xmark fa-xl" ></i></span>'
-        cart_var += "<div id='div_" + n + "' class='animate__animated animate__fadeInUp'><img src='" + cart_array[n].img + "' class='cart-img'><span id='item_cart'><p><b>" + (n + 1) + ")</b> " + cart_array[n].tipo + " " + cart_array[n].char + " " + cart_array[n].div + " " + cart_array[n].precio + del_icon + "<hr></span></div>"
+        cart_var += "<div id='div_" + n + "' class='animate__animated animate__fadeInUp'><img src='" + cart_array[n].img + "' class='cart-img'><span id='item_cart'><p><b>" + (n + 1) + ")</b> " + cart_array[n].tipo + " " + cart_array[n].char + " " + cart_array[n].div + " " + cart_array[n].precio + del_icon + "</span></div>"
     }
 
     if (cart_array.length > 0 && document.URL.includes("cart.html")) {
@@ -248,7 +237,7 @@ function cart() {
 //Funcion que se invoca cuando se necesita hacer una actualizacion del dom carrito
 function show_Cart() {
     if (document.URL.includes("cart.html")) {
-        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:25px;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;margin-top:3%;"
+        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:1%;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;margin-top:3%;"
         document.getElementById("reset").style = "display:inline;"
         document.getElementById("carrito").innerHTML = cart()
 
@@ -260,8 +249,9 @@ function show_Cart() {
 function empty_cart() {
     if (document.URL.includes("cart.html")) {
         document.getElementById("title").innerHTML = "Aún no has agregado nada al carrito"
-        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:25px;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;margin-top:3%;"
+        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:1%;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;margin-top:3%;"
         document.getElementById("pay").style.display = "none"
+        document.getElementById("pay_popup").classList.remove("open_pay_popup")
         document.getElementById("reset_div").style.display = "none"
         document.getElementById('subt').innerHTML = ""
     }
