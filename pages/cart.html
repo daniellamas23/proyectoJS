@@ -37,26 +37,56 @@
         <i class="fas fa-bars"></i>
       </label>
 
-      <ul class="nav-menu animate__animated animate__backInRight">      
+      <ul class="nav-menu animate__animated animate__backInRight">
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="./market.html">tienda</a></li>
         <li><a href="./aboutus.html">sobre nosotros</a></li>
         <li><a href="./contactus.html">contacto</a></li>
-        <li><a href="./cart.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a></li>
+        <li><a href="./cart.html"><i class="fa-solid fa-cart-shopping fa-2xl" id="counter"></i></a></li>
       </ul>
 
     </nav> <!-- barra de navegación-->
   </header>
 
-  <div class="animate__animated animate__backInLeft botones">
-      <li> <button type="button" id="reset">Vaciar Carrito</button> </li>
-  </div>
-
   <div>
     <p id="title" class="animate__animated animate__fadeIn animate__delay-1s"></p>
     <p id="carrito"></p>
-    <p id="subt"></p>
-    <center><button id="pay" type="button" onclick="" style="display:none;">Pagar</button></center>
+    <p id="subt" class="animate__animated animate__fadeIn animate__delay-1s"></p>
+    <div class="animate__animated animate__fadeIn animate__delay-1s botones" id="reset_div" style="text-align:right;">
+      <button type="button" id="reset" style="display:none;">Vaciar Carrito</button>
+    </div>
+    <div id="pay_div">
+      <div id="pay_popup" class="pay_popup">
+       <img src="../img/tarjeta.jpg" alt="datos_tarjeta">
+       
+        <div>
+          <label for="_name">nombre</label>
+          <input type="text" id="_name" placeholder="M. Molina" readonly>
+      </div>      
+      <div>
+          <label for="_email">email (*)</label>
+          <input type="email" id="_email" placeholder="molina@mail.com" readonly>
+      </div>    
+      <div>
+          <label for="_phone">teléfono</label>
+          <input type="text" id="_phone" placeholder="+598 98 123 456" readonly>
+      </div>
+    
+
+      <select name="_subject" id="_subject">
+          <option value="1">1 cuota</option>
+          <option value="2">2 cuotas</option>
+          <option value="3">3 cuotas</option>
+          <option value="4">4 cuotas</option>
+          <option value="5">5 cuotas</option>
+          <option value="6">6 cuotas</option>
+        </select>
+        <div>
+       <label><input type="checkbox" id="check"> Confirma?</label>
+      </div>
+    </div>
+      <button class="animate__animated animate__fadeIn animate__delay-1s" id="pay" type="button" onclick="" style="display:none;">Pagar</button>
+    </div>
   </div>
 
 

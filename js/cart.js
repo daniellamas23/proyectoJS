@@ -14,10 +14,42 @@ cart_clear === null ? "" :
         sessionStorage.removeItem('carrito')
         cart_array = JSON.parse(sessionStorage.getItem('carrito')) || [];
         document.getElementById("pay").style.display = "none"
+        document.getElementById("counter").innerText = "0"
+        document.getElementById("pay_popup").classList.remove("open_pay_popup")
         empty_cart()
         document.getElementById("subt").innerHTML = ""
         show_Cart()
     })
+
+const pay_btn = document.getElementById("pay")
+pay_btn === null ? "" :
+    pay_btn.addEventListener("click", () => {
+        document.getElementById("pay_popup").classList.add("open_pay_popup")
+
+        if (document.querySelectorAll('input[type="checkbox"]:checked').length > 0) {
+
+            alert("PAGO REALIZADO CON ÉXITO!! \n SE RECARGARÁ LA PÁGINA")
+            sessionStorage.removeItem("carrito")
+            document.location.reload()
+        }
+        else {
+
+        }
+
+
+        /*       if (document.getElementById("check").checked) {
+                  console.log(document.getElementById("check").checked)
+                  console.log("está clickeada")
+              }
+             else {
+              console.log(document.getElementById("check"))
+                  console.log("no está clickeada")
+              } */
+
+    })
+
+
+
 
 
 
@@ -28,8 +60,8 @@ function alerta_producto() {
         duration: 2000,
         newWindow: true,
         close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
             background: "linear-gradient(to right, green , grey )",
@@ -84,19 +116,19 @@ function alerta_del() {
 
 function button_add_cart() {
 
-        let add_cart = document.getElementsByClassName("add_cart");
+    let add_cart = document.getElementsByClassName("add_cart");
 
-        Object.keys(add_cart).forEach(function (element) {
-            add_cart[element].addEventListener("click", function (evento) {
-                add_cart_click = evento.target
-                id = add_cart_click.getAttribute('id')
-              
-                add_item_cart(parseInt(id))
+    Object.keys(add_cart).forEach(function (element) {
+        add_cart[element].addEventListener("click", function (evento) {
+            add_cart_click = evento.target
+            id = add_cart_click.getAttribute('id')
 
-            })
+            add_item_cart(parseInt(id))
 
-        });
-    }
+        })
+
+    });
+}
 
 
 
@@ -113,7 +145,7 @@ function add_item_cart(add_id) {
     else {
 
         let encontrado = cart_array.push(found)
-
+        document.getElementById("counter").innerText = cart_array.length
         let carrito = sessionStorage.setItem("carrito", JSON.stringify(cart_array)) //Almaceno objeto found en sesion para luego construir cart en el html
 
 
@@ -216,7 +248,8 @@ function cart() {
 //Funcion que se invoca cuando se necesita hacer una actualizacion del dom carrito
 function show_Cart() {
     if (document.URL.includes("cart.html")) {
-        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:25px;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;"
+        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:25px;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;margin-top:3%;"
+        document.getElementById("reset").style = "display:inline;"
         document.getElementById("carrito").innerHTML = cart()
 
     }
@@ -227,8 +260,9 @@ function show_Cart() {
 function empty_cart() {
     if (document.URL.includes("cart.html")) {
         document.getElementById("title").innerHTML = "Aún no has agregado nada al carrito"
-        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:25px;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;"
+        document.getElementById("title").style.cssText = "text-align:center;max-width:50%;max-height:25px;border-radius:10px 10px;margin:auto;letter-spacing:2px;font-size:16px;background:rgba(0,0,0,.80);color:white;font-weigth:600;margin-top:3%;"
         document.getElementById("pay").style.display = "none"
+        document.getElementById("reset_div").style.display = "none"
         document.getElementById('subt').innerHTML = ""
     }
 
@@ -260,6 +294,7 @@ function del_product(id) {
     let session_array = JSON.parse(sessionStorage.getItem('carrito'))
     session_array.splice(id, 1)
     sessionStorage.setItem('carrito', JSON.stringify(session_array))
+    document.getElementById("counter").innerText = cart_array.length
     alerta_del()
 
     cart_array.length === 0 ? empty_cart() + show_Cart() : show_Cart()

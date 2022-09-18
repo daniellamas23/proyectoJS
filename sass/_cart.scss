@@ -10,12 +10,18 @@
 }
 
 #reset {
-    margin-top:10px;
-   
+    
+    margin-right:10px;
+    font-weight: 600;
+    color: black;
+    width: 10%;
+    border-radius: 9px
 }
+
 #reset:hover {
-    background-color:rgba(255, 0, 0, 0.3);
+    background-color: rgba(255, 0, 0, 0.3);
 }
+
 #item_cart {
     display: flex;
     align-items: baseline;
@@ -32,17 +38,42 @@
         color: red;
     }
 }
+#pay_div {
+    text-align:center;
+}
+
+.pay_popup {
+ position:absolute;
+padding-top:20px;
+height: 300px;
+max-width:30%;
+margin:0 auto 10px;
+background:#fff;
+border-radius: 6px;
+text-align:center;
+border:2px solid rgba(0, 180, 183, 0.8);
+transform: translate(0, -80%) scale(0.1);
+visibility: hidden;
+transition: transform 1s
+}
+
+.open_pay_popup {
+    position:relative;
+    visibility:visible;
+    transform: translate(0,0) scale(1);
+}
 
 
-#pay {
+#pay {    
+    margin:0 auto;
     font-weight: 600;
     color: black;
-   
     width: 10%;
     border-radius: 9px
 }
-#pay:hover{
-    background:rgba(32, 255, 0, 0.6);
+
+#pay:hover {
+    background: rgba(32, 255, 0, 0.6);
 }
 
 #subt {
@@ -63,4 +94,3 @@
 
 
 }
-

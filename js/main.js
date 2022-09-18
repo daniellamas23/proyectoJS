@@ -17,9 +17,9 @@ function cargar_catalogo() {
         })
 
     }).then(() => {
-        market()      
+        market()
     }).then(() => {
-        button_add_cart()      
+        button_add_cart()
     })
 }
 document.URL.includes("index.html") ? "" : cargar_catalogo(); //Evito error en index porque no encuentra la ruta para catalog.json
@@ -30,7 +30,13 @@ const login = document.getElementById('login_btn')
 login === null ? "" :
     login.addEventListener("click", () => {
         if (user_array.length > 0) {
-            alert("ya te encuentras logueado")
+            sessionStorage.removeItem("user")
+            sessionStorage.removeItem('carrito')
+            document.getElementById("login_btn").innerText = "Login"
+            document.getElementById("login_btn").classList.remove("logout")
+            document.getElementById('counter').innerText = ""
+           
+
         }
         else {
             add_class = document.getElementById("popup")
@@ -54,6 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
     cart_array = JSON.parse(sessionStorage.getItem('carrito')) || [];
     user_array = JSON.parse(sessionStorage.getItem('user')) || [];
     document.URL.includes("cart.html") && cart_array.length > 0 ? show_Cart() + get_del_button() : empty_cart();
+    sessionStorage.getItem('user') ? document.getElementById('counter').innerText = cart_array.length : ""
+
+    if (sessionStorage.getItem('user') && document.URL.includes("index.html")) {
+        document.getElementById("login_btn").innerText = "Logout"
+        document.getElementById("login_btn").classList.add("logout")        
+    }
+
+
+
 }
 )
 
@@ -88,7 +103,6 @@ function crear_usuario() {
 
         setTimeout(login_sucesfull, 1000)
         function login_sucesfull() {
-            let bienvenida = document.getElementById("bienvenido")
             bienvenido.innerText = "Bienvenido " + user1.bienvenida() + " !!!"
             bienvenido.style = "text-align:center;font-size:16px;font-weight:600;text-shadow:-1px 1px 3px grey;padding-top: 3%;"
             boton = document.getElementById("button_cart")
@@ -97,6 +111,9 @@ function crear_usuario() {
             document.getElementById("acceder").style = "display:none"
             document.getElementById("user").style = "display:none"
             document.getElementById("pass").style = "display:none"
+            document.getElementById("counter").innerText = cart_array.length
+            document.getElementById("login_btn").innerText = "Logout"
+
             return user1
 
         }
