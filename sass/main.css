@@ -408,6 +408,12 @@ header .nav-menu li a:hover {
     -ms-grid-columns: 1fr !important;
         grid-template-columns: 1fr !important;
   }
+  .login_btn_responsive {
+    right: 110px;
+  }
+  .cart_responsive {
+    right: 50px;
+  }
 }
 
 @media screen and (min-width: 870px) {
